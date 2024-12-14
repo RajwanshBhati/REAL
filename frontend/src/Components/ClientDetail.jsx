@@ -3,13 +3,14 @@ import axios from 'axios';
 
 const ClientDetail = () => {
   const [clients, setClients] = useState([]);  
-  const [loading, setLoading] = useState(true);  // Loading state for UI feedback
-  const [error, setError] = useState(null);     // Error handling state
+  const [loading, setLoading] = useState(true);  //Loading state ko handle
+  const [error, setError] = useState(null);     // error kai liyai 
 
+ 
   useEffect(() => {
     const fetchClients = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_API}/auth/getUsers`);  
+        const response = await axios.get('http://localhost:8080/api/v1/auth/getUsers');  
         if (response.data.success) {
           setClients(response.data.users);  
         } else {
@@ -67,7 +68,7 @@ const ClientDetail = () => {
         </table>
       </div>
 
-      {/* Responsive UI for mobile */}
+      {/*mobile kai liyai */}
       <div className="block md:hidden mt-6">
         {clients.length > 0 ? (
           clients.map((client, index) => (

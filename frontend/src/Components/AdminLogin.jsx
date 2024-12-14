@@ -15,7 +15,7 @@ const AdminLogin = () => {
 
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_API}/auth/adminRoutes`,
+        "http://localhost:8080/api/v1/auth/adminRoutes",
         { email, password },
         {
           headers: {
