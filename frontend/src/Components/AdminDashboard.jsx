@@ -7,7 +7,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import { useNavigate } from "react-router-dom";
 
 const AdminDashboard = () => {
-   const navigate = useNavigate()
+  const navigate = useNavigate()
   const [selectedTab, setSelectedTab] = useState("ProductManagement");
   const [formData, setFormData] = useState({
     name: "",
@@ -42,6 +42,8 @@ const AdminDashboard = () => {
 
     try {
       const token = localStorage.getItem("token");
+    console.log(import.meta.env.VITE_API_URL);
+    
       const response = await axios.post(
         `  ${import.meta.env.VITE_API_URL}/api/v1/auth/create-project`, // Updated to use REACT_APP_API
         form,
