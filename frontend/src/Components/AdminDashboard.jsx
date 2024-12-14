@@ -7,7 +7,6 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import { useNavigate } from "react-router-dom";
 
 const AdminDashboard = () => {
-  const navigate = useNavigate()
   const [selectedTab, setSelectedTab] = useState("ProductManagement");
   const [formData, setFormData] = useState({
     name: "",
@@ -68,7 +67,7 @@ const AdminDashboard = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    navigate("/admin-login");
+    window.location.href = "/admin-login";
   };
 
   return (
