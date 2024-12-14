@@ -1,4 +1,4 @@
-Steps to Set Up the Project
+Steps to Set Up the Project and run on Localhost
 1. Clone the Repository
 The first step is to clone the repository to your local machine. Open your terminal/command prompt and run the following command:
 
