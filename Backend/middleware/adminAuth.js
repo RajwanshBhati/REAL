@@ -9,7 +9,7 @@ import jwt from 'jsonwebtoken'
 
     const {email,password}=req.body;
    let Admin="admin@gmail.com";
-   let code=54321;
+   let code=12345;
   if(email!=Admin && code!=password){
    return res.status(401).send({
       sucess:false,

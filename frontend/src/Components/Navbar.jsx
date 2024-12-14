@@ -42,7 +42,7 @@ const Navbar = () => {
               onClick={() => handleScrollAndClose('about-products-section')}
               className="text-lg font-bold text-gray-700 cursor-pointer hover:text-blue-600 transition duration-300"
             >
-              ABOUT PRODUCTS
+              ABOUT PROJECTS
             </button>
           </li>
           <li>

@@ -57,7 +57,7 @@ const AdminLogin = () => {
               <strong>Email:</strong> admin@gmail.com
             </p>
             <p className="text-sm text-gray-600">
-              <strong>Password:</strong> 54321
+              <strong>Password:</strong> 12345
             </p>
           </div>
 
