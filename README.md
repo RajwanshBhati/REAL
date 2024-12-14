@@ -1,4 +1,6 @@
-Steps to Set Up the Project and run on Localhost
+--------------------------------------------------------------------------------Steps to Set Up the Project and run on Localhost---------------------------
+
+
 1. Clone the Repository
 The first step is to clone the repository to your local machine. Open your terminal/command prompt and run the following command:
 
@@ -29,6 +31,7 @@ Install the backend dependencies:
 bash
 Copy code
 npm install
+
 3. Start the Frontend Server
 To start the frontend server (React), run the following command in the frontend folder:
 
@@ -56,11 +59,11 @@ Email (ID): admin@gmail.com
 Password: 12345
 
 
-Project Features
+-------------------------------------------------------------------------------------------Project Features-----------------------------------------------------------------------------------------------------------
 Landing Page
 The landing page is the public-facing interface designed to engage users and present information dynamically fetched from the backend. Key components include:
 
-"Our Project" Section:
+-----{"Our Project" Section:}---
 
 Showcases all available projects retrieved from the backend.
 Each project entry displays:
@@ -69,7 +72,12 @@ Name of the project.
 A brief description.
 A non-functional "Read More" button for UI purposes.
 Purpose: Highlights the work portfolio in a visually appealing way.
-"Happy Clients" Section:
+
+
+
+
+
+-----{ "Happy Clients" Section }----
 
 Displays a list of satisfied clients fetched from the backend.
 Each client entry includes:
@@ -78,7 +86,9 @@ Name of the client.
 Their designation (e.g., CEO, Developer, etc.).
 A short description or testimonial.
 Purpose: Builds trust by showcasing client relationships.
-Contact Form:
+
+
+------{Contact Form}--------
 
 A form where users can enter their personal details to get in touch.
 Input fields include:
@@ -88,7 +98,9 @@ Mobile Number.
 City.
 Submitted data will be sent to the backend and stored for administrative purposes.
 Purpose: Provides a way for users to connect with the company.
-Newsletter Subscription Section:
+
+
+-----{Newsletter Subscription Section}----
 
 Allows users to subscribe to newsletters by providing their email address.
 The entered email will be sent to the backend for storage.
@@ -96,7 +108,7 @@ Purpose: Expands the company’s outreach by building a subscription list.
 Admin Panel
 The admin panel is the backend management interface, accessible only to authorized administrators. It allows admins to perform CRUD (Create, Read, Update, Delete) operations on various data entities. Key functionalities include:
 
-Project Management:
+----{ Project Management}-----
 
 Add new projects by entering:
 Project Image.
@@ -104,7 +116,10 @@ Name.
 Description.
 View, edit, and delete existing project entries.
 Purpose: Keeps the project portfolio up-to-date.
-Client Management:
+
+
+
+----{Client Management}---
 
 Add client details including:
 Client Image.
@@ -113,7 +128,9 @@ Description.
 Designation (e.g., CEO, Designer).
 View and manage client data.
 Purpose: Maintains a database of client relationships.
-Contact Form Details:
+
+
+-----{Contact Form Details}----
 
 View all user-submitted contact form entries with the following details:
 Full Name.
@@ -121,7 +138,8 @@ Email Address.
 Mobile Number.
 City.
 Purpose: Provides insights into potential leads or inquiries.
-Newsletter Subscription Management:
+
+{ Newsletter Subscription Management:}
 
 View a list of all email addresses subscribed to the newsletter.
-Purpose: Assists in managing subscriber outreach campaigns.
+
