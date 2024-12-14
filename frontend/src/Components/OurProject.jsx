@@ -8,7 +8,7 @@ const OurProject = () => {
 
   const getAllProjects = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8080/api/v1/project/get-projects");
+      const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/project/get-projects`);
       setProjects(data.projects);
       setLoading(false);
     } catch (err) {

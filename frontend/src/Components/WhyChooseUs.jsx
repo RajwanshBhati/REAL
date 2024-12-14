@@ -2,14 +2,13 @@ import React from "react";
 
 const WhyChooseUs = () => {
   return (
-    <div section id="why-choose-us" className="mt-16 text-center pb-24"> {/* Increased padding-bottom */}
+    <div section id="why-choose-us" className="mt-16 text-center pb-24"> 
       {/* Heading */}
       <h3 className="text-2xl font-bold text-blue-600">Why Choose Us?</h3>
-      <div className="w-20 h-1 bg-blue-600 mx-auto mt-2"></div> {/* Underline */}
+      <div className="w-20 h-1 bg-blue-600 mx-auto mt-2"></div> 
 
-      {/* Features */}
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {/* Potential ROI */}
+     
         <div className="text-center">
           <div className="flex justify-center mb-4">
             <img
@@ -25,7 +24,7 @@ const WhyChooseUs = () => {
           </p>
         </div>
 
-        {/* Design */}
+      
         <div className="text-center">
           <div className="flex justify-center mb-4">
             <img
@@ -40,7 +39,6 @@ const WhyChooseUs = () => {
           </p>
         </div>
 
-        {/* Marketing */}
         <div className="text-center">
           <div className="flex justify-center mb-4">
             <img

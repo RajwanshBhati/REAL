@@ -39,7 +39,7 @@ const ClientMag = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/review/create-review",
+        `${process.env.REACT_APP_API}/review/create-review`,
         formData,
         {
           headers: {

@@ -40,12 +40,16 @@ const AdminDashboard = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.post("http://localhost:8080/api/v1/project/create-project", form, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await axios.post(
+        `${process.env.REACT_APP_API}/api/v1/project/create-project`, // Updated to use REACT_APP_API
+        form,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       setShowToast(true);
       setFormData({ name: "", projectName: "", location: "", photo: null });

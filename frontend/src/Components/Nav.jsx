@@ -13,7 +13,10 @@ const Nav = () => {
     setErrorMessage("");
 
     try {
-      const response = await axios.post("http://localhost:8080/api/v1/subscribers/uplordSubscribe", { subscriber: email });
+      const response = await axios.post(
+        `${process.env.REACT_APP_API}/api/v1/subscribers/uplordSubscribe`,
+        { subscriber: email }
+      );
       setSuccessMessage("Thank you for subscribing!");
       setEmail("");
     } catch (err) {
