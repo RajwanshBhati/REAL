@@ -1,5 +1,5 @@
 import express from "express";
-import { createProject, getProjects } from "../controllers/project.js";
+import { createProject, getProjects } from "../Controllers/project.js";
 import formidable from "express-formidable"; 
 
 const router = express.Router();
