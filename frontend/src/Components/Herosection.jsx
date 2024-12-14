@@ -31,7 +31,10 @@ const Herosection = () => {
     }
 
     try {
-      const res = await axios.post(`${process.env.REACT_APP_API}/api/v1/auth/register`, formData);
+      const res = await axios.post(
+        `${import.meta.env.VITE_API_URL}/api/v1/auth/register`,  // Updated to use VITE_API_URL
+        formData
+      );
       if (res && res.status === 201 && res.data.success) {
         setMessage("Form submitted successfully!");
         setFormData({ name: "", email: "", phone: "", city: "" });

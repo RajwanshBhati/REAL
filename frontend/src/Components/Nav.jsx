@@ -14,7 +14,7 @@ const Nav = () => {
 
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_API}/api/v1/subscribers/uplordSubscribe`,
+        `${import.meta.env.VITE_API_URL}/api/v1/subscribers/uplordSubscribe`,  // Updated to use VITE_API_URL
         { subscriber: email }
       );
       setSuccessMessage("Thank you for subscribing!");

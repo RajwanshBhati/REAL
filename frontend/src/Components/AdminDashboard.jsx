@@ -41,7 +41,7 @@ const AdminDashboard = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        `${process.env.REACT_APP_API}/api/v1/project/create-project`, // Updated to use REACT_APP_API
+        `  ${import.meta.env.VITE_API_URL}/api/v1/auth/create-project`, // Updated to use REACT_APP_API
         form,
         {
           headers: {
@@ -64,7 +64,7 @@ const AdminDashboard = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    window.location.href = "/login";
+    window.location.href = "/admin-login";
   };
 
   return (

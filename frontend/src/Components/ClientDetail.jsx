@@ -3,14 +3,13 @@ import axios from 'axios';
 
 const ClientDetail = () => {
   const [clients, setClients] = useState([]);  
-  const [loading, setLoading] = useState(true);  //Loading state ko handle
-  const [error, setError] = useState(null);     // error kai liyai 
+  const [loading, setLoading] = useState(true);  
+  const [error, setError] = useState(null);     
 
- 
   useEffect(() => {
     const fetchClients = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/v1/auth/getUsers');  
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/auth/getUsers`);  
         if (response.data.success) {
           setClients(response.data.users);  
         } else {
@@ -28,7 +27,7 @@ const ClientDetail = () => {
   }, []);
 
   if (loading) {
-    return <div className="text-center text-gray-600 font-medium py-6">Loading...</div>;  
+    return <div className="text-center text-gray-600 font-medium py-6">Loading clients...</div>;  
   }
 
   if (error) {
@@ -68,7 +67,7 @@ const ClientDetail = () => {
         </table>
       </div>
 
-      {/*mobile kai liyai */}
+      {/* Mobile View */}
       <div className="block md:hidden mt-6">
         {clients.length > 0 ? (
           clients.map((client, index) => (

@@ -39,7 +39,7 @@ const ClientMag = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/review/create-review",
+        `${import.meta.env.VITE_API_URL}/api/v1/review/create-review`,  // Use VITE_API_URL from environment variable
         formData,
         {
           headers: {

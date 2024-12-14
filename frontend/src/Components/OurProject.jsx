@@ -8,7 +8,8 @@ const OurProject = () => {
 
   const getAllProjects = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8080/api/v1/project/get-projects");
+      // Using VITE_API_URL from environment variable
+      const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/project/get-projects`);
       setProjects(data.projects);
       setLoading(false);
     } catch (err) {

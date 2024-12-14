@@ -15,7 +15,7 @@ const AdminLogin = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/auth/adminRoutes",
+      `${import.meta.env.VITE_API_URL}/api/v1/auth/adminRoutes`,
         { email, password },
         {
           headers: {
@@ -57,7 +57,7 @@ const AdminLogin = () => {
               <strong>Email:</strong> admin@gmail.com
             </p>
             <p className="text-sm text-gray-600">
-              <strong>Password:</strong> 12345
+              <strong>Password:</strong> 
             </p>
           </div>
 

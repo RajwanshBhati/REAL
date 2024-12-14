@@ -9,7 +9,8 @@ const Subscribe = () => {
   useEffect(() => {
     const fetchSubscribers = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/v1/subscribers/getSubscriber'); 
+        // Using the environment variable for API URL
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/subscribers/getSubscriber`); 
         setSubscribers(response.data.subs);
       } catch (err) {
         setError(err.response?.data?.message || 'Error fetching subscribers');
