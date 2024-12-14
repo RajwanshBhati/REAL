@@ -4,8 +4,10 @@ import ClientMag from "./ClientMag";
 import ClientDetail from "./ClientDetail";
 import Subscribe from "./Subscribe";
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { useNavigate } from "react-router-dom";
 
 const AdminDashboard = () => {
+   const navigate = useNavigate()
   const [selectedTab, setSelectedTab] = useState("ProductManagement");
   const [formData, setFormData] = useState({
     name: "",
@@ -64,7 +66,7 @@ const AdminDashboard = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    window.location.href = "/admin-login";
+    navigate("/admin-login");
   };
 
   return (
